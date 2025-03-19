@@ -1,0 +1,98 @@
+* {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "opsz" 12;
+  padding: 5px;                  
+  margin: 5px;
+                 
+}
+
+nav a {
+  text-decoration: none;
+  color: #8094A9;
+  margin-right: 15px;
+
+}
+
+th {
+  padding: 12px 0;
+  background-color: #8094A9;
+  color: white;
+  width: fit-content
+
+}
+
+table tbody tr:nth-child(even){
+  background-color: #fb33335c;
+}
+
+form * {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+
+
+header {
+  color: whitesmoke;
+  /* background: #8094A9; */
+}
+
+#webname {
+  background-color: #8094A9;
+
+}
+
+/* Bio section styling */
+#moreText {
+  display: none; /* Hide full bio by default */
+  color: #555;
+  font-size: 16px;
+}
+
+button {
+  background-color: #4CAF50;  /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+#validationMessage {
+  color: red;  
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
