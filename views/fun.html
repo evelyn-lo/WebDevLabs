@@ -15,8 +15,8 @@
     <script src="../static/script.js" defer></script>
 
 </head>
-<body>
-    <body>
+<body onload = "addYear()">
+
     <header >
         <h1 id = "webname">Evelyn Lo</h1>
         <nav>
@@ -35,7 +35,9 @@
   
     <div class="main">
         <h2>Things I love to do for fun </h2>
-        <ul>
+        <button id="showButton" onclick="showList()">Click to see...</button>
+
+        <ul id ="funList" style = "display:none;">
             <li>Read</li>
             <li>Pickleball</li>
           </ul>
@@ -44,7 +46,8 @@
         
     </div>
     <footer>
-        &copy: 2025 designed and coded by Evelyn 
+        <p id = "copyYear"></p>
+        <p>&copy: designed and coded by Evelyn</p>
     </footer>
 </body>
 </html>

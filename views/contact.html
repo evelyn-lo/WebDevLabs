@@ -7,71 +7,74 @@
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Evelyn professional website">
     <link rel="stylesheet" href="../static/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Evelyn Lo</title>
     <script src="../static/script.js" defer></script>
-
+    <title>Evelyn Lo</title>
 </head>
-<body>
-    <body>
-    <header >
-        <h1 id = "webname">Evelyn Lo</h1>
-        <nav>
-            
-                <a href="../index.html">Home</a>
-                <a href="cv.html">CV</a>
-                <a href="contact.html">Contact me</a>
-                <a href="fun.html">For fun</a>
-           
-            
+<body onload="addYear()">
 
+    <header>
+        <h1 id="webname">Evelyn Lo</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact me</a>
+            <a href="fun.html">For fun</a>
         </nav>
-    
     </header>
+
     <div class="main">
         <h2>Contact Me</h2>
-        <form action="#" method="post">
+
+        <!-- Contact Form -->
+        <form id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+            <!-- Name field -->
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-          
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <!-- Email field -->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-          
-            <label for="comment">Comment:</label><br>
-            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-          
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <!-- Message field -->
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            <br><br>
+
             <input type="submit" value="Submit">
-          </form>
-          <table>
+        </form>
+
+        <!-- Validation message area -->
+        <div id="validationMessage" style="color: red; display: none;">
+            <p>Please fill out all required fields.</p>
+        </div>
+
+        <!-- Contact Information Table -->
+        <table>
             <thead>
-              <tr>
-                <th>Contact Information</th>
-                <th>Details</th>
-              </tr>
+                <tr>
+                    <th>Contact Information</th>
+                    <th>Details</th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Phone Number</td>
-                <td>+1 650-316-9997</td>
-              </tr>
-              <tr>
-                <td>Email</td>
-                <td>evelynlo@andrew.cmu.edu</td>
-              </tr>
-
+                <tr>
+                    <td>Phone Number</td>
+                    <td>+1 650-316-9997</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>evelynlo@andrew.cmu.edu</td>
+                </tr>
             </tbody>
-          </table>
-          
-            
-        
-        
-        
+        </table>
     </div>
+
     <footer>
-        <p>&copy: 2025 designed and coded by Evelyn </p>
+        <p id="copyYear"></p>
+        <p>&copy; designed and coded by Evelyn</p>
     </footer>
+
 </body>
 </html>

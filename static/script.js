@@ -28,7 +28,7 @@ let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
 function findTheBanana(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === "Banana") {
-        alert("found the Banana in " + i);
+        //alert("found the Banana in " + i);
         }
     }
 }
@@ -39,7 +39,7 @@ findTheBanana(L2);
 function findTheBananaForEach(arr) {
     arr.forEach(item => {
       if (item === "Banana") {
-        alert("We found a banana in the first array");
+        //alert("We found a banana in the first array");
       }
     });
   }
@@ -69,5 +69,59 @@ function greetingFunc(){
 }
 
 greetingFunc();
+
+function addYear(){
+    let currentYear = new Date().getFullYear();
+    let yearElement = document.getElementById("copyYear");
+    yearElement.innerHTML = currentYear;
+}
+
+function showList(){
+    let funList = document.getElementById("funList");
+    let showButton = document.getElementById("showButton");
+
+    funList.style.display = "block";
+
+    showButton.style.display = "none";
+}
+
+function toggleBio() {
+    var dots = $("#dots");
+    var moreText = $("#moreText");
+    var btnText = $("#readMoreBtn");
+
+    // Toggle the bio display
+    if (moreText.is(":visible")) {
+        // If full bio is visible, hide it and show "Read More" button
+        moreText.hide();
+        dots.show();
+        btnText.text("Read More");
+    } else {
+        // If full bio is hidden, show it and hide "Read More" button
+        moreText.show();
+        dots.hide();
+        btnText.text("Read Less");
+    }
+}
+
+function validateForm() {
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var message = document.getElementById("message");
+
+    var validationMessage = document.getElementById("validationMessage");
+
+    validationMessage.style.display = "none";
+
+    if (!name.checkValidity() || !email.checkValidity() || !message.checkValidity()) {
+        // If any field is invalid, show the validation message
+        validationMessage.style.display = "block";
+        return false; 
+    }
+    return true; 
+}
+
+
+window.onload = addYear;
 
   
