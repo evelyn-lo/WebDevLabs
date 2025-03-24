@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Evelyn Lo">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Evelyn professional website">
+    <title>Evelyn Lo</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload = "addyear()">
+    <header >
+        <h1 id = "webname">Evelyn Lo</h1>
+        
+        <nav>
+           
+                <a href="index.html">Home</a>
+                <a href="views/cv.html">CV</a>
+                <a href="views/contact.html">Contact me</a>
+                <a href="views/fun.html">For fun</a>
+            
+            
+    
+        </nav>
+    </header> 
+
+
+    <div class="main">
+        <h2 id= "greeting">Hi, my name is Evelyn</h2>
+        <img src = "static/portfolio.jpg" alt = "Headshot">
+        
+        <p>Hi, my name is Evelyn, and I'm currently a student at Carnegie Mellon University studying Information Systems.  <span id="dots">...</span></p>
+        <p id="moreText" style="display:none;">
+            Hi, my name is Evelyn, and I'm currently a student at Carnegie Mellon University studying Information Systems. I am interested in AI and have relevant internship experience and projects.
+        </p>
+
+        <button id="readMoreBtn" onclick="toggleBio()">Read More</button>
+        
+    </div>
+    <footer>
+        <p id = "copyYear"></p>
+        <p>&copy: designed and coded by Evelyn</p>
+    </footer>
+</body>
+</html>
