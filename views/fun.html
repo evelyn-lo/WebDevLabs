@@ -33,15 +33,42 @@
     </header>
 
   
-    <div class="main">
-        <h2>Things I love to do for fun </h2>
-        <button id="showButton" onclick="showList()">Click to see...</button>
+    <div class="mainLayout">
+          <div id = "item1">
+            <h2>Things I love to do for fun </h2>
+        
+                <ul id ="funList" >
+                    <li>Read</li>
+                    <li>Pickleball</li>
+                </ul>
+            
+            <!-- <button id="showButton" onclick="showList()">Click to see...</button> -->
 
-        <ul id ="funList" style = "display:none;">
-            <li>Read</li>
-            <li>Pickleball</li>
-          </ul>
+            <div id = "item3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/e4iQ7IRaR6c?si=fB7C0F_g24PgZLXl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>         
+                
+            </div>
+            
+          </div>
+
           
+
+        
+
+        <div id = "item2">
+            
+            <img src = "../static/poodle.png" class = "funIMG" alt = "A fun activity image">
+            <div id = "item4">
+                <div class="container">
+                    <h2>Need Some Advice?</h2>
+                    <p id="adviceText">Click the button to get a random piece of advice!</p>
+                    <button onclick="getAdvice()">Get Advice</button>
+                </div>
+    
+              </div>
+
+            </div>
+        
         
         
     </div>

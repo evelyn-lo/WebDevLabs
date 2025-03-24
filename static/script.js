@@ -76,14 +76,14 @@ function addYear(){
     yearElement.innerHTML = currentYear;
 }
 
-function showList(){
-    let funList = document.getElementById("funList");
-    let showButton = document.getElementById("showButton");
+// function showList(){
+//     let funList = document.getElementById("funList");
+//     let showButton = document.getElementById("showButton");
 
-    funList.style.display = "block";
+//     funList.style.display = "block";
 
-    showButton.style.display = "none";
-}
+//     showButton.style.display = "none";
+// }
 
 function toggleBio() {
     var dots = $("#dots");
@@ -123,5 +123,28 @@ function validateForm() {
 
 
 window.onload = addYear;
+
+function getAdvice() {
+    // Make a request to the Advice Slip API
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();  // Parse the response as JSON
+        })
+        .then(data => {
+            // Update the advice text on the webpage
+            const advice = data.slip.advice;  // Extract the advice
+            document.getElementById("adviceText").innerText = advice;
+        })
+        .catch(error => {
+            // Handle any errors
+            console.error("Error fetching advice:", error);
+            document.getElementById("adviceText").innerText = "Sorry, couldn't get advice at the moment.";
+        });
+}
+
+
 
   
