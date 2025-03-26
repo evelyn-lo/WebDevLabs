@@ -249,3 +249,37 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for effect */
 }
+
+nav a {
+  text-decoration: none;
+  color: #8094A9;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4CAF50;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+}
+
+@keyframes fadeInGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+  }
+}
+
+#webname {
+  animation: fadeInGlow 1.5s ease-in-out;
+}

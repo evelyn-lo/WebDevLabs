@@ -145,6 +145,39 @@ function getAdvice() {
         });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+  
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("show");
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Highlight active link
+    const navLinks = document.querySelectorAll("nav a");
+    const currentPath = window.location.pathname;
+  
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPath ||
+          currentPath.endsWith(link.getAttribute("href"))) {
+        link.classList.add("active");
+      }
+    });
+  
+    // Hamburger toggle (if not already included)
+    const toggle = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+    if (toggle && links) {
+      toggle.addEventListener("click", () => {
+        links.classList.toggle("show");
+      });
+    }
+  });
+  
+  
+
 
 
   
