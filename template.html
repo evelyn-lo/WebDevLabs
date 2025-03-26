@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Evelyn Lo">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Evelyn professional website">
+    <title>Evelyn Lo</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/template.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script src="static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload="addyear()">
+    <div class="container">
+        <header class="header">
+            <h1 id="webname">Evelyn Lo</h1>
+        </header>
+
+        <nav class="nav">
+            <div class="menu-toggle" id="menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
+              <a href="index.html">Home</a>
+              <a href="views/cv.html">CV</a>
+              <a href="views/contact.html">Contact me</a>
+              <a href="views/fun.html">For fun</a>
+            </div>
+        </nav>
+
+        <main class="main">
+            <div class="mainimg">
+                <img src="static/portfolio.jpg" alt="Profile image of Evelyn">
+            </div>
+            
+            <div class="maincontent">
+                <h2 id="greeting">Hi, my name is Evelyn</h2>
+                <p>Hi, my name is Evelyn, and I'm currently a student at Carnegie Mellon University studying Information Systems. <span id="dots">...</span></p>
+                <p id="moreText" style="display:none;">
+                    Hi, my name is Evelyn, and I'm currently a student at Carnegie Mellon University studying Information Systems. I am interested in AI and have relevant internship experience and projects.
+                </p>
+                <button id="readMoreBtn" onclick="toggleBio()">Read More</button>
+            </div>
+
+            <div class="bottomcontent">
+                <h3>Additional Information</h3>
+                <p>This is the bottom content section where extra content goes. Add links, images, or anything else you'd like.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear">© 2025</p>
+            <p>&copy; designed and coded by Evelyn</p>
+        </footer>
+    </div>
+</body>
+</html>
